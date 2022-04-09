@@ -16,7 +16,10 @@ const addScanningAnimation = () => {
 		authorization.style.display = 'block'
 		authorization.classList.add('blinkingAnimation')
 	}, 1000)
-	
+	setTimeout(() => {
+		player.setAttribute('src', youtubeLink + youtubeAutoplay)
+		player.style.display = 'block'
+	}, 3500)
 }
 
 fingerprintImg.addEventListener('click', addScanningAnimation)
