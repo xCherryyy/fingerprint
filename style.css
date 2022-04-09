@@ -57,6 +57,7 @@ body {
 	height: 0%;
 	background-image: url('./fingerprint2.png');
 	background-size: cover;
+	cursor: pointer;
 }
 
 .fingerprint-text {
