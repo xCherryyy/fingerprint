@@ -1,0 +1,125 @@
+*,
+*::before,
+::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: sans-serif;
+	background: linear-gradient(
+		0deg,
+		rgb(104, 103, 103) 0%,
+		rgb(85, 95, 100) 49%,
+		rgba(104, 103, 103) 100%
+	);
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 100%;
+	height: 100vh;
+}
+
+.addScanningAnimation {
+	animation: scanning 1s ease-out;
+}
+
+.blinkingAnimation {
+	animation: authorizationBlink 2.5s;
+}
+
+.fingerprint-img {
+	position: relative;
+	height: 600px;
+	width: 500px;
+	background-image: url('./fingerprint.png');
+	margin-bottom: 100px;
+	background-size: cover;
+}
+
+.fingerprint-change-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 0%;
+	background-image: url('./fingerprint2.png');
+	background-size: cover;
+}
+
+.fingerprint-text {
+	font-size: 64px;
+	color: #3fefef;
+}
+
+.authorization {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.authorization p {
+	color: #fff;
+	font-size: 64px;
+}
+
+iframe {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+@keyframes authorizationBlink {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0;
+	}
+	70% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes scanning {
+	from {
+		height: 0%;
+	}
+	to {
+		height: 100%;
+	}
+}
