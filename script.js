@@ -4,6 +4,9 @@ const authorization = document.querySelector('.authorization')
 const fingerprintText = document.querySelector('.fingerprint-text ')
 const player = document.querySelector('iframe')
 
+const youtubeLink = 'https://www.youtube.com/embed/BU0FiHUkR2w?'
+const youtubeAutoplay = 'autoplay=1'
+
 const addScanningAnimation = () => {
 	fingerprintChangeImg.classList.add('addScanningAnimation')
 	setTimeout(() => {
@@ -14,6 +17,7 @@ const addScanningAnimation = () => {
 		authorization.classList.add('blinkingAnimation')
 	}, 1000)
 	setTimeout(() => {
+		player.setAttribute('src', youtubeLink + youtubeAutoplay)
 		player.style.display = 'block'
 	}, 3500)
 }
